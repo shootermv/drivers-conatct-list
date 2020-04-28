@@ -1,15 +1,19 @@
 import React from "react";
 import  {Article, Imgwrap, DriverType, DetailsContainer, Img, Row} from './Contact.styles';
 import citizen from './citizen.svg';
+import missing from './missing.png';
 import professional from './professional.svg';
 
 
 const Contact = ({contact}) => {
+  const addDefaultSrc = ev => {
+    ev.target.src = missing;
+  }
   const {name, driverType, driverRank, email, phone, profile_image: img } = contact;
   return (
     <Article>
        <Imgwrap>
-         <Img src={img}/>
+         <Img src={img || missing} onError={addDefaultSrc}/>
        </Imgwrap>
        
        <DetailsContainer>

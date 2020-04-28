@@ -10,6 +10,10 @@ Also it should filter contacts when somebody types at the "search" box
 - Styled Components
 - Redux
 
+# Interesting Things About This Project
+It uses React Hooks 
+
+
 # How To Run
  ```bash
 git clone https://github.com/shootermv/drivers-contact-list.git new-project
