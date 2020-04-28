@@ -20,6 +20,7 @@ export default function App() {
 
   const onSearch = searchTerm => setTerm(searchTerm);
 
+  // must search in all fields of 'contact' object except profile_image
   const filtered = arr => {
     return arr.filter(obj => Object.keys(obj).some(key => (key !== 'profile_image') && (new RegExp(term, 'ig')).test(obj[key])));
   } 
@@ -28,11 +29,9 @@ export default function App() {
     <div className="App">
       <Navbar onSearch={onSearch}/>
       <main className="content">
-       
           {filtered(contacts).map(contact => (
             <Contact key={`contact-${contact.name}`} contact={contact} />
-          ))}
-       
+          ))}  
       </main>
     </div>
   );
