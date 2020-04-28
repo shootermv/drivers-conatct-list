@@ -1,8 +1,13 @@
 .card {
     background: #fff;
+    padding: 10px;
 }
 
+.card .img-wrap {
+   overflow: hidden;
+   height: 165px;
+}
 
 .card img {
-    width: 50px;
+    width: 170px;
 }
