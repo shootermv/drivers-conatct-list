@@ -1,5 +1,5 @@
 import React from "react";
-import  {Article, Imgwrap, DriverType, DetailsContainer, Img} from './Contact.styles';
+import  {Article, Imgwrap, DriverType, DetailsContainer, Img, Row} from './Contact.styles';
 import citizen from './citizen.svg';
 import professional from './professional.svg';
 
@@ -15,9 +15,17 @@ const Contact = ({contact}) => {
        <DetailsContainer>
           <DriverType src={driverType === 'Professional' ? professional : citizen} /> 
           <h3>{name}</h3>
-          <div>driverRank: {driverRank}</div>
-          <div>Phone Number: {phone}</div>
-          <div>Email: {email}</div>
+          <div>
+            DriverRank: {driverRank}
+          </div>
+          <Row>
+            <label>Phone Number:</label> 
+            <b>{phone}</b>
+          </Row>
+          <Row>
+            <label>Email:</label> 
+            <b>{email || 'N/A'}</b>
+          </Row>
        </DetailsContainer>
     </Article>
   );

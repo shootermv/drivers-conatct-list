@@ -1,19 +1,19 @@
 import styled from 'styled-components';
 
 const Article = styled.article`
-  background: var(--main-secondary-color); 
-  padding: 10px;
-  color: var(--main-text-color);
-  overflow: hidden;
-  height: 275px;
-  cursor: pointer;
+   background: var(--main-secondary-color); 
+   padding: 10px;
+   color: var(--main-text-color);
+   overflow: hidden;
+   height: 275px;
+   cursor: pointer;
 `
 const Imgwrap = styled.div`
-  overflow: hidden;
-  height: 185px;
+   overflow: hidden;
+   height: 185px;
 `
 const Img = styled.img`
-  width: 170px;
+   width: 170px;
 `
 const DriverType = styled.img`
    background: var(--main-primary-color);
@@ -25,11 +25,20 @@ const DriverType = styled.img`
    width: 40px;
 `
 const DetailsContainer = styled.div`
-  background: var(--main-secondary-color);
-  transition: 0.1s ease-in-out;
-  &:hover {
+   background: var(--main-secondary-color);
+   transition: 0.1s ease-in-out;
+   &:hover {
     transform: translateY(-100px)
-  }
+   }
+`
+const Row = styled.div`
+   display: flex;
+   font-size: 0.7em;
+   b {
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+   }
 `
 
-export {Article, Imgwrap, DriverType, DetailsContainer, Img};
+export { Article, Imgwrap, DriverType, DetailsContainer, Img, Row };
