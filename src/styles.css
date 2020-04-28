@@ -1,0 +1,53 @@
+/*  RESET  */
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+a{text-decoration: none;}
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  background: #efefef;
+
+}
+.App .content {
+  padding: 70px 130px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(140px, 1fr));
+  grid-gap: 10px;
+}
+
+
+/* LIST */
+ul, li {
+  list-style-type: none;
+}
