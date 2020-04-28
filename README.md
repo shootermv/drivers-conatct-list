@@ -6,7 +6,7 @@ The motivation behind this repo was - to create React app that displayes a conta
 Also it should filter contacts when somebody types at the "search" box
 
 # Tools Used To Build This App:  
-- Creat React App
+- Create React App
 - Styled Components
 - Redux
 

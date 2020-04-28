@@ -10,7 +10,7 @@ export default function App() {
   const [term, setTerm] = useState('');
   // must call `fetch` whin component is mounted
   useEffect(() => {
-    fetch(`https://private-05627-frontendnewhire.apiary-mock.com/contact_list
+    fetch(`http://private-05627-frontendnewhire.apiary-mock.com/contact_list
     `)
       .then(d => d.json())
       .then(data => {
