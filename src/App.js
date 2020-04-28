@@ -7,6 +7,8 @@ import Contact from './Contactt';
 
 export default function App() {
   const [contacts, setContacts] = useState([]);
+  const [term, setTerm] = useState('');
+  // must call `fetch` whin component is mounted
   useEffect(() => {
     fetch(`http://private-05627-frontendnewhire.apiary-mock.com/contact_list
     `)
@@ -16,12 +18,18 @@ export default function App() {
       });
   }, []);
 
+  const onSearch = searchTerm => setTerm(searchTerm);
+
+  const filtered = arr => {
+    return arr.filter(obj => Object.keys(obj).some(key => (key !== 'profile_image') && (new RegExp(term, 'ig')).test(obj[key])));
+  } 
+
   return (
     <div className="App">
-      <Navbar/>
+      <Navbar onSearch={onSearch}/>
       <main className="content">
        
-          {contacts.map(contact => (
+          {filtered(contacts).map(contact => (
             <Contact key={`contact-${contact.name}`} contact={contact} />
           ))}
        

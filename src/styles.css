@@ -46,7 +46,9 @@ ol[class] {
   font-family: sans-serif;
   text-align: center;
   background: var(--main-bg-color);
-
+  display: flex;
+  flex-direction: column; 
+  height: 100vh;
 }
 .App .content {
   padding: 70px 250px;
