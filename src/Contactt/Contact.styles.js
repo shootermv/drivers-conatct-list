@@ -5,7 +5,7 @@ const Article = styled.article`
   padding: 10px;
   color: var(--main-text-color);
   overflow: hidden;
-  height: 300px;
+  height: 275px;
   cursor: pointer;
 `
 const Imgwrap = styled.div`
