@@ -11,9 +11,10 @@ const Article = styled.article`
 const Imgwrap = styled.div`
    overflow: hidden;
    height: 185px;
+   background: var(--main-text-color);
 `
 const Img = styled.img`
-   width: 170px;
+   width: 180px;
 `
 const DriverType = styled.img`
    background: var(--main-primary-color);
