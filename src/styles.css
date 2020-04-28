@@ -33,10 +33,18 @@ ol[class] {
   padding: 0;
 }
 
+:root {
+  --main-primary-color: #00dafc;/* coral;*/
+  --main-secondary-color:#fff; /* coral;*/
+  --main-bg-color: #efefef;
+}
+
+
+
 .App {
   font-family: sans-serif;
   text-align: center;
-  background: #efefef;
+  background: var(--main-bg-color);
 
 }
 .App .content {
@@ -44,10 +52,4 @@ ol[class] {
   display: grid;
   grid-template-columns: repeat(4, minmax(140px, 1fr));
   grid-gap: 10px;
-}
-
-
-/* LIST */
-ul, li {
-  list-style-type: none;
 }
