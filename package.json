@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "keywords": [],
-  "homepage": "https://shootermv.github.io/drivers-contact-list",
+  "homepage": "http://shootermv.github.io/drivers-contact-list",
   "main": "src/index.js",
   "dependencies": {
     "react": "16.12.0",
