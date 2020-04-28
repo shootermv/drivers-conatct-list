@@ -1,13 +1,19 @@
 import React from "react";
-import './Navbar.css';
+
+import {Input, Form, Brand, Header} from  './Navbar.styles.js';
+
 
 const Navbar = () => {
-  return (<header className="top-navbar">
-      <div className="brand"><a href="/">Contact List</a></div>
-      <form>
-          <input placeholder="search"/>
-       </form>
-   </header>);
+  return (
+    <Header>
+        <Brand>
+            <a href="/">Contact List</a>
+        </Brand>
+        <Form>
+            <Input placeholder="search"/>
+        </Form>
+    </Header>
+   );
 };
 
 export default Navbar;
