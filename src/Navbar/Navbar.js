@@ -1,5 +1,5 @@
 import React from "react";
-
+import searchIcon from './searchIcon.svg'
 import {Input, Form, Brand, Header} from  './Navbar.styles.js';
 
 
@@ -11,6 +11,7 @@ const Navbar = () => {
         </Brand>
         <Form>
             <Input placeholder="search"/>
+            <img src={searchIcon}/>
         </Form>
     </Header>
    );

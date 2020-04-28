@@ -18,8 +18,13 @@ const Brand = styled.div`
 const Form = styled.form`
     display: flex;
     border-radius: 10px;
-    background: #fff;
+    background: var(--main-secondary-color);
     padding: 0 10px;
+    img {
+        height: 15px;
+        margin: 3px -5px 0 0;
+        opacity: 0.2;
+    }
 `
 
 const Input = styled.input`
@@ -27,6 +32,9 @@ const Input = styled.input`
     padding: 4px;
     outline: none;
     width: 200px;
+    ::placeholder {
+        opacity: 0.8
+    }
 `
 
 export {Input, Form, Brand, Header}
