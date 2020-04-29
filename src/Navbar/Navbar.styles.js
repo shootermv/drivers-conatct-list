@@ -33,9 +33,9 @@ const Brand = styled.div`
 
 const Form = styled.form`
     display: flex;
-    border-radius: 10px;
+    border-radius: 20px;
     background: var(--main-secondary-color);
-    padding: 0 10px;
+    padding: 0 15px;
     width: 100%;
     img {
         height: 20px;
@@ -48,7 +48,8 @@ const Form = styled.form`
     /* small tablet styles */
     @media screen and (min-width: 620px){
         &{
-          width: 200px;
+            border-radius: 10px;  
+            width: 200px;
         }
         img {
             height: 15px;

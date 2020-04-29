@@ -62,10 +62,19 @@ ol[class] {
 /* small tablet styles */
 @media screen and (min-width: 620px){
   .App .content {
+    grid-template-columns: repeat(2, minmax(140px, 1fr));
+    padding: 40px 30px;
+  }
+}
+
+/* in between breakpoint */
+@media screen and (min-width: 720px){
+  .App .content {
     grid-template-columns: repeat(3, minmax(140px, 1fr));
     padding: 70px 50px;
   }
 }
+
 
 /* large tablet & laptop styles */
 @media screen and (min-width: 960px){

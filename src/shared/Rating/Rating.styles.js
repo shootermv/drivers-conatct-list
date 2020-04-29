@@ -3,7 +3,13 @@ import styled from 'styled-components';
 
 const Wrap = styled.div`
     display: flex; 
-    padding: 5px 25px;
+    padding: 0px 25px;
+    /* small tablet styles */
+    @media screen and (min-width: 620px){
+        &{
+            padding: 5px 15px;
+        }
+    }
     .star {
         cursor: pointer;
         height: 25px;

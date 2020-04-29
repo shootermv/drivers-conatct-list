@@ -5,7 +5,7 @@ const Article = styled.article`
    padding: 10px;
    color: var(--main-text-color);
    overflow: hidden;
-   height: 470px;
+   height: 475px;
    cursor: pointer;
    /* mobile styles */
 
@@ -36,11 +36,19 @@ const DriverType = styled.img`
    background: var(--main-primary-color);
    border-radius: 50px;
    position: relative;
-   top: -20px;
-   left: -32px;
-   height: 40px;
-   width: 40px;
+   top: -30px;
+   left: -25%;
+   height: 60px;
+   width: 60px;
    margin-bottom: -25px;
+   /* small tablet styles */
+   @media screen and (min-width: 620px){
+      &{
+         top: -20px;
+         height: 40px;
+         width: 40px;
+      }
+   }  
 `
 const DetailsContainer = styled.div`
    background: var(--main-secondary-color);
@@ -51,7 +59,20 @@ const DetailsContainer = styled.div`
    h3 {
       text-align: left;
       padding: 5px 25px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      
    }
+   /* small tablet styles */
+   @media screen and (min-width: 1200px){
+      h3{
+         font-size:0.9em;
+         padding: 10px 15px;
+
+      }
+   } 
+
 `
 const Row = styled.div`
    display: flex;
