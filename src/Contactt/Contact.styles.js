@@ -31,6 +31,7 @@ const Imgwrap = styled.div`
 `
 const Img = styled.img`
    width: 100%;
+   height: auto;
 `
 const DriverType = styled.img`
    background: var(--main-primary-color);
