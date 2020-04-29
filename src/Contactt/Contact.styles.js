@@ -5,16 +5,32 @@ const Article = styled.article`
    padding: 10px;
    color: var(--main-text-color);
    overflow: hidden;
-   height: 275px;
+   height: 550px;
    cursor: pointer;
+   /* mobile styles */
+
+   /* small tablet styles */
+   @media screen and (min-width: 620px){
+      &{
+         height: 275px;
+      }
+   }    
 `
 const Imgwrap = styled.div`
    overflow: hidden;
-   height: 185px;
+   height: 370px;
    background: var(--main-text-color);
+   /* mobile styles */
+
+   /* small tablet styles */
+   @media screen and (min-width: 620px){
+      &{
+         height: 185px;
+      }
+   }     
 `
 const Img = styled.img`
-   width: 180px;
+   width: 100%;
 `
 const DriverType = styled.img`
    background: var(--main-primary-color);
