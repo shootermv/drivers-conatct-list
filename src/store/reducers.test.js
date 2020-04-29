@@ -5,7 +5,8 @@ describe('contacts reducer', () => {
       const initialState = {
           contacts: [],
           filtered: [],
-          term: null
+          term: null,
+          loading: false
       };
       expect(contactsReducer(undefined, {})).toEqual(initialState);
     });
@@ -14,7 +15,8 @@ describe('contacts reducer', () => {
       const initialState = {
         contacts: [],
         filtered: [],
-        term: null
+        term: null,
+        loading: false
       };
       const contacts = [{}, {}];
       const action = {
@@ -32,7 +34,8 @@ describe('contacts reducer', () => {
       const initialState = {
         contacts,
         filtered: contacts,
-        term: null
+        term: null,
+        loading: false
       };
       
       const action = {
@@ -52,7 +55,8 @@ describe('contacts reducer', () => {
       const initialState = {
         contacts,
         filtered,
-        term: 'u'
+        term: 'u',
+        loading: false
       };
       
       const action = {
