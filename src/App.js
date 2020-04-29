@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 import "./styles.css";
@@ -13,24 +13,15 @@ import {getContacts} from './store/actions';
 
 export default function App() {
   const dispatch = useDispatch();
-  const filteredContacts = useSelector(({ filtered }) => filtered);
-  const [contacts, setContacts] = useState([]);
-  const [term, setTerm] = useState('');
-  const [loading, setLoading] = useState(false)
-  // must call `fetch` when component is mounted
-  /*
-  useEffect(() => {
+  const { filtered: filteredContacts, loading } = useSelector(({ filtered, loading }) => ({ filtered, loading }));
+ 
 
-  }, []);
-  */
-
-  const onSearch = searchTerm => setTerm(searchTerm);
-
-  dispatch(getContacts())
+  useEffect(() =>dispatch(getContacts()), []);
+  
 
   return (
     <div className="App">
-      <Navbar onSearch={onSearch}/>
+      <Navbar/>
       <main className="content">
           {loading && <Loader/>} 
           {!loading && filteredContacts.map(contact => (
