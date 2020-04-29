@@ -18,6 +18,7 @@ The motivation behind this repo was - to create React app that displayes a conta
 # Interesting Things About This Project
 * It uses React Hooks
 * Semantic HTML
+* Utni tests for reducer
 
 # How To Run
  ```bash

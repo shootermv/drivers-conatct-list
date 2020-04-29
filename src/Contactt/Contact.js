@@ -3,7 +3,7 @@ import  {Article, Imgwrap, DriverType, DetailsContainer, Img, Row} from './Conta
 import citizen from './citizen.svg';
 import missing from './missing.png';
 import professional from './professional.svg';
-
+import Rating from '../shared/Rating'
 
 const Contact = ({contact}) => {
   const addDefaultSrc = ev => {
@@ -20,7 +20,7 @@ const Contact = ({contact}) => {
           <DriverType src={driverType === 'Professional' ? professional : citizen} /> 
           <h3>{name}</h3>
           <div>
-            DriverRank: {driverRank}
+            <Rating rating={driverRank}/>
           </div>
           <Row>
             <label>Phone:</label> 

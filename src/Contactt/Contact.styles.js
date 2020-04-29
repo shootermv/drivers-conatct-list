@@ -12,7 +12,7 @@ const Article = styled.article`
    /* small tablet styles */
    @media screen and (min-width: 620px){
       &{
-         height: 275px;
+         height: 287px;
       }
    }    
 `
@@ -46,6 +46,10 @@ const DetailsContainer = styled.div`
    transition: 0.1s ease-in-out;
    &:hover {
     transform: translateY(-100px)
+   }
+   h3 {
+      text-align: left;
+      padding: 5px 25px;
    }
 `
 const Row = styled.div`
