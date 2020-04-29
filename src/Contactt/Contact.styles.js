@@ -5,14 +5,14 @@ const Article = styled.article`
    padding: 10px;
    color: var(--main-text-color);
    overflow: hidden;
-   height: 550px;
+   height: 470px;
    cursor: pointer;
    /* mobile styles */
 
    /* small tablet styles */
    @media screen and (min-width: 620px){
       &{
-         height: 287px;
+         height: 284px;
       }
    }    
 `
@@ -40,6 +40,7 @@ const DriverType = styled.img`
    left: -32px;
    height: 40px;
    width: 40px;
+   margin-bottom: -25px;
 `
 const DetailsContainer = styled.div`
    background: var(--main-secondary-color);

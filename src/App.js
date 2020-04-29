@@ -7,7 +7,7 @@ import "./styles.css";
 import Norecords from './App.styles';
 import Navbar from './Navbar';
 import Contact from './Contactt';
-import Loader from './Loader';
+import Loader from './shared/Loader';
 
 import {getContacts} from './store/actions';
 
