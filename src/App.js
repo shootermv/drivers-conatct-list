@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./styles.css";
-
+import  {Norecords} from './App.styles';
 
 import Navbar from './Navbar';
 import Contact from './Contactt';
@@ -37,7 +37,7 @@ export default function App() {
           {!loading && filtered(contacts).map(contact => (
             <Contact key={`contact-${contact.name}`} contact={contact} />
           ))}
-          
+          {!loading && !filtered(contacts).length && <Norecords>No Records Found</Norecords>}
       </main>
     </div>
   );
