@@ -10,7 +10,7 @@ export function contacts(state = {contacts:[], filtered:[], term: null, loading:
                 ...state,           
                 loading: true 
             };           
-        case 'CONTACTS_SUCCESS':           
+        case 'CONTACTS_SUCCESS':       
            const {contacts} =  action;
             return  {     
                 ...state,           
@@ -19,7 +19,7 @@ export function contacts(state = {contacts:[], filtered:[], term: null, loading:
                 loading: false
             };
             
-        case 'CONTACTS_FILTERED':            
+        case 'CONTACTS_FILTERED':  
             let {term} = action;
             let filtered = filterContacts(state.contacts, term)
             return {                
@@ -29,7 +29,7 @@ export function contacts(state = {contacts:[], filtered:[], term: null, loading:
             };
 
           
-        case 'FILTER_CLEANED':
+        case 'CONTACTS_FILTER_CLEANED':
             return {    
                 ...state,
                 term: '',

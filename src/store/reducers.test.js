@@ -60,7 +60,7 @@ describe('contacts reducer', () => {
       };
       
       const action = {
-          type: 'FILTER_CLEANED'
+          type: 'CONTACTS_FILTER_CLEANED'
       };
       const updatedState = {...initialState, contacts, term: '', filtered: contacts }
       const result = contactsReducer(initialState, action)
