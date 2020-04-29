@@ -1,6 +1,6 @@
 import { contactConstants } from './constants';
 
-const url = `http://private-05627-frontendnewhire.apiary-mock.com/contact_list`;
+const url = `${process.env.REACT_APP_URL ? 'https' : 'http'}://private-05627-frontendnewhire.apiary-mock.com/contact_list`;
 
 export function getContacts() {
     return dispatch => {
