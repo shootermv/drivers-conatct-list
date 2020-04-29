@@ -1,4 +1,4 @@
-export const contactConstans = {
+export const contactConstants = {
     REQUEST: 'CONTACTS_REQUEST',
     SUCCESS: 'CONTACTS_SUCCESS',
     FILTERED: 'CONTACTS_FILTERED',

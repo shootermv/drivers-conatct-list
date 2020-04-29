@@ -1,3 +1,4 @@
+import { contactConstants } from './constants';
 const filterContacts = (arr, term) => {
     return arr.filter(obj => Object.keys(obj).some(key => (key !== 'profile_image') && (new RegExp(term, 'ig')).test(obj[key])));
 }
@@ -5,12 +6,12 @@ const filterContacts = (arr, term) => {
 export function contacts(state = {contacts:[], filtered:[], term: null, loading: false}, action) {
    
     switch (action.type) {
-        case 'CONTACTS_REQUEST':  
+        case contactConstants.REQUEST:  
             return  {     
                 ...state,           
                 loading: true 
             };           
-        case 'CONTACTS_SUCCESS':       
+        case contactConstants.SUCCESS:       
            const {contacts} =  action;
             return  {     
                 ...state,           
@@ -19,7 +20,7 @@ export function contacts(state = {contacts:[], filtered:[], term: null, loading:
                 loading: false
             };
             
-        case 'CONTACTS_FILTERED':  
+        case contactConstants.FILTERED:  
             let {term} = action;
             let filtered = filterContacts(state.contacts, term)
             return {                
@@ -29,7 +30,7 @@ export function contacts(state = {contacts:[], filtered:[], term: null, loading:
             };
 
           
-        case 'CONTACTS_FILTER_CLEANED':
+        case contactConstants.FILTER_CLEANED:
             return {    
                 ...state,
                 term: '',

@@ -1,43 +1,42 @@
 import React, { useState, useEffect } from "react";
-import "./styles.css";
-import  {Norecords} from './App.styles';
+import { useSelector, useDispatch } from "react-redux";
 
+import "./styles.css";
+
+/* components */
+import Norecords from './App.styles';
 import Navbar from './Navbar';
 import Contact from './Contactt';
 import Loader from './Loader';
 
+import {getContacts} from './store/actions';
+
 export default function App() {
+  const dispatch = useDispatch();
+  const filteredContacts = useSelector(({ filtered }) => filtered);
   const [contacts, setContacts] = useState([]);
   const [term, setTerm] = useState('');
   const [loading, setLoading] = useState(false)
   // must call `fetch` when component is mounted
+  /*
   useEffect(() => {
-    setLoading(true);
-    fetch(`http://private-05627-frontendnewhire.apiary-mock.com/contact_list
-    `)
-      .then(d => d.json())
-      .then(data => {
-        setContacts(data);
-        setLoading(false);
-      });
+
   }, []);
+  */
 
   const onSearch = searchTerm => setTerm(searchTerm);
 
-  // must search in all fields of 'contact' object except profile_image
-  const filtered = arr => {
-    return arr.filter(obj => Object.keys(obj).some(key => (key !== 'profile_image') && (new RegExp(term, 'ig')).test(obj[key])));
-  } 
+  dispatch(getContacts())
 
   return (
     <div className="App">
       <Navbar onSearch={onSearch}/>
       <main className="content">
           {loading && <Loader/>} 
-          {!loading && filtered(contacts).map(contact => (
+          {!loading && filteredContacts.map(contact => (
             <Contact key={`contact-${contact.name}`} contact={contact} />
           ))}
-          {!loading && !filtered(contacts).length && <Norecords>No Records Found</Norecords>}
+          {!loading && !filteredContacts.length && <Norecords>No Records Found</Norecords>}
       </main>
     </div>
   );

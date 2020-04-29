@@ -29,5 +29,5 @@ export function filterContacts(term) {
 }
 
 export function filterCleaned() {
-    return { type: contactConstants.FILTER_CLEANED, term }
+    return { type: contactConstants.FILTER_CLEANED}
 }

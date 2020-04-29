@@ -7,4 +7,4 @@ const Norecords = styled.div`
   grid-column: 1 / 5;
 `
 
-export {Norecords};
+export default Norecords;
