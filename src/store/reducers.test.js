@@ -49,7 +49,7 @@ describe('contacts reducer', () => {
       expect(result.filtered.length).toEqual(updatedState.filtered.length);
     }); 
     
-    it('filter action should populate "filtered" fields', () => {
+    it('clean action should reset contacts', () => {
       const contacts = [{nm: 'uuu'}, {nm: 'aaa'}];
       const filtered = [{nm: 'uuu'}]
       const initialState = {

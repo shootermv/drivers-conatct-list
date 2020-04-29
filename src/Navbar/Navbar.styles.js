@@ -41,6 +41,7 @@ const Form = styled.form`
         height: 20px;
         margin: 10px -5px 0 0;
         opacity: 0.2;
+        cursor: pointer;
     }
     /* mobile styles */
 
@@ -63,9 +64,10 @@ const Input = styled.input`
     outline: none;
     width: 100%;
     ::placeholder {
-        opacity: 0.8
+        opacity: 0.8;
     }
   
 `
+
 
 export {Input, Form, Brand, Header}
