@@ -1,9 +1,14 @@
 import React from "react";
 import  {Article, Imgwrap, DriverType, DetailsContainer, Img, Row} from './Contact.styles';
+
+/* IMG */
 import citizen from './citizen.svg';
 import missing from './missing.png';
 import professional from './professional.svg';
-import Rating from '../shared/Rating'
+
+import Rating from '../shared/Rating';
+
+import {formatPhone} from '../utils'
 
 const Contact = ({contact}) => {
   const addDefaultSrc = ev => {
@@ -24,7 +29,7 @@ const Contact = ({contact}) => {
           </div>
           <Row>
             <label>Phone:</label> 
-            <b>{phone || 'N/A'}</b>
+            <b>{formatPhone(phone) || 'N/A'}</b>
           </Row>
           <Row>
             <label>Email:</label> 
