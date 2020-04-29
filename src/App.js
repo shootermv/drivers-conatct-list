@@ -4,17 +4,21 @@ import "./styles.css";
 
 import Navbar from './Navbar';
 import Contact from './Contactt';
+import Loader from './Loader';
 
 export default function App() {
   const [contacts, setContacts] = useState([]);
   const [term, setTerm] = useState('');
-  // must call `fetch` whin component is mounted
+  const [loading, setLoading] = useState(false)
+  // must call `fetch` when component is mounted
   useEffect(() => {
+    setLoading(true);
     fetch(`http://private-05627-frontendnewhire.apiary-mock.com/contact_list
     `)
       .then(d => d.json())
       .then(data => {
         setContacts(data);
+        setLoading(false);
       });
   }, []);
 
@@ -29,9 +33,11 @@ export default function App() {
     <div className="App">
       <Navbar onSearch={onSearch}/>
       <main className="content">
-          {filtered(contacts).map(contact => (
+          {loading && <Loader/>} 
+          {!loading && filtered(contacts).map(contact => (
             <Contact key={`contact-${contact.name}`} contact={contact} />
-          ))}  
+          ))}
+          
       </main>
     </div>
   );
