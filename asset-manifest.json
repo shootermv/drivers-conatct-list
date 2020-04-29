@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/drivers-contact-list/static/css/main.b297efff.chunk.css",
-    "main.js": "/drivers-contact-list/static/js/main.07d42c2a.chunk.js",
-    "main.js.map": "/drivers-contact-list/static/js/main.07d42c2a.chunk.js.map",
+    "main.css": "/drivers-contact-list/static/css/main.d3d3b1d7.chunk.css",
+    "main.js": "/drivers-contact-list/static/js/main.04578702.chunk.js",
+    "main.js.map": "/drivers-contact-list/static/js/main.04578702.chunk.js.map",
     "runtime~main.js": "/drivers-contact-list/static/js/runtime~main.2a74e62a.js",
     "runtime~main.js.map": "/drivers-contact-list/static/js/runtime~main.2a74e62a.js.map",
-    "static/js/2.91412aba.chunk.js": "/drivers-contact-list/static/js/2.91412aba.chunk.js",
-    "static/js/2.91412aba.chunk.js.map": "/drivers-contact-list/static/js/2.91412aba.chunk.js.map",
+    "static/js/2.dbeb0bf2.chunk.js": "/drivers-contact-list/static/js/2.dbeb0bf2.chunk.js",
+    "static/js/2.dbeb0bf2.chunk.js.map": "/drivers-contact-list/static/js/2.dbeb0bf2.chunk.js.map",
     "index.html": "/drivers-contact-list/index.html",
-    "precache-manifest.df6cb9a3fa8c1d017b079289023c69cf.js": "/drivers-contact-list/precache-manifest.df6cb9a3fa8c1d017b079289023c69cf.js",
+    "precache-manifest.2fa7e315aa3a30810b6e38718d92a905.js": "/drivers-contact-list/precache-manifest.2fa7e315aa3a30810b6e38718d92a905.js",
     "service-worker.js": "/drivers-contact-list/service-worker.js",
-    "static/css/main.b297efff.chunk.css.map": "/drivers-contact-list/static/css/main.b297efff.chunk.css.map",
+    "static/css/main.d3d3b1d7.chunk.css.map": "/drivers-contact-list/static/css/main.d3d3b1d7.chunk.css.map",
     "static/media/citizen.svg": "/drivers-contact-list/static/media/citizen.8173105b.svg",
+    "static/media/logo.svg": "/drivers-contact-list/static/media/logo.676b4d07.svg",
     "static/media/professional.svg": "/drivers-contact-list/static/media/professional.7db0edbd.svg",
     "static/media/searchIcon.svg": "/drivers-contact-list/static/media/searchIcon.f63792ab.svg"
   }
