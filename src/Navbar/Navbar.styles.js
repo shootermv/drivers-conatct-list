@@ -13,29 +13,59 @@ const Header = styled.header`
 `
   
 const Brand = styled.div`
-   a{color: var(--main-secondary-color);}
+   a span{display:none;}
+   a img {
+       height: 30px;
+       margin: 5px 10px 0  0; 
+   } 
+   /* mobile styles */
+
+   /* small tablet styles */
+   @media screen and (min-width: 620px){
+      a img{display:none;} 
+      a span{
+          display:block;
+          color: var(--main-secondary-color);
+      }
+   }
 `
-  
+
+
 const Form = styled.form`
     display: flex;
     border-radius: 10px;
     background: var(--main-secondary-color);
     padding: 0 10px;
+    width: 100%;
     img {
-        height: 15px;
-        margin: 3px -5px 0 0;
+        height: 20px;
+        margin: 10px -5px 0 0;
         opacity: 0.2;
     }
+    /* mobile styles */
+
+    /* small tablet styles */
+    @media screen and (min-width: 620px){
+        &{
+          width: 200px;
+        }
+        img {
+            height: 15px;
+            margin: 3px -5px 0 0;
+            opacity: 0.2;
+        }
+    }      
 `
 
 const Input = styled.input`
     border: none;
     padding: 4px;
     outline: none;
-    width: 200px;
+    width: 100%;
     ::placeholder {
         opacity: 0.8
     }
+  
 `
 
 export {Input, Form, Brand, Header}

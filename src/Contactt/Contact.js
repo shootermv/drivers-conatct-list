@@ -23,8 +23,8 @@ const Contact = ({contact}) => {
             DriverRank: {driverRank}
           </div>
           <Row>
-            <label>Phone Number:</label> 
-            <b>{phone}</b>
+            <label>Phone:</label> 
+            <b>{phone || 'N/A'}</b>
           </Row>
           <Row>
             <label>Email:</label> 

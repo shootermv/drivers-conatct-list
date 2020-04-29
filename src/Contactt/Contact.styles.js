@@ -34,12 +34,25 @@ const DetailsContainer = styled.div`
 `
 const Row = styled.div`
    display: flex;
-   font-size: 0.7em;
+   padding: 5px 25px;
+   label {
+      text-align: left;
+   }
    b {
      white-space: nowrap;
      overflow: hidden;
      text-overflow: ellipsis;
+     margin-left: 5px;
    }
+   /* mobile styles */
+
+   /* small tablet styles */
+   @media screen and (min-width: 620px){
+      &{
+         font-size: 0.8em;
+         padding: 5px;
+      }
+   }   
 `
 
 export { Article, Imgwrap, DriverType, DetailsContainer, Img, Row };

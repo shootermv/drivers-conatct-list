@@ -51,8 +51,33 @@ ol[class] {
   min-height: 100vh;
 }
 .App .content {
-  padding: 70px 250px;
+  padding: 40px 20px;
   display: grid;
-  grid-template-columns: repeat(4, minmax(140px, 1fr));
+  grid-template-columns: repeat(1, minmax(140px, 1fr));
   grid-gap: 10px;
+}
+/* mobile styles */
+
+/* small tablet styles */
+@media screen and (min-width: 620px){
+  .App .content {
+    grid-template-columns: repeat(3, minmax(140px, 1fr));
+    padding: 70px 50px;
+  }
+}
+
+/* large tablet & laptop styles */
+@media screen and (min-width: 960px){
+  .App .content {
+    grid-template-columns: repeat(3, minmax(140px, 1fr));
+    padding: 70px 150px;
+  }
+}
+
+/* desktop styles */
+@media screen and (min-width: 1200px){
+  .App .content {
+    grid-template-columns: repeat(4, minmax(140px, 1fr));
+    padding: 70px 250px;
+  }
 }
