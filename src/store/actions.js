@@ -3,15 +3,14 @@ import { contactConstants } from './constants';
 const url = `${process.env.REACT_APP_URL ? 'https' : 'http'}://private-05627-frontendnewhire.apiary-mock.com/contact_list`;
 
 export function getContacts() {
-    return dispatch => {
+    return async dispatch => {
         dispatch(request());
-
-        fetch(url)
-            .then(data => data.json())
-            .then(
-                contacts => dispatch(success(contacts)),
-                error => dispatch(failure(error.toString()))
-            );
+        try {   
+           let contacts = await fetch(url).then(data => data.json())
+           dispatch(success(contacts))
+        } catch(error) {
+           dispatch(failure(error.toString()))
+        }
     };
 
     function request() { return { type: contactConstants.REQUEST } }
