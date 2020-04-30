@@ -1,8 +1,10 @@
 [Demo](http://shootermv.github.io/drivers-contact-list/)  
 
 # Motivation
-The motivation behind this repo was - to create React app that displayes a contacts gallery   
+The motivation behind this repo was - to create a simple React app that displayes a contacts gallery   
 ![intro](https://raw.githubusercontent.com/shootermv/drivers-contact-list/master/screen.png?raw=true) 
+here is mobule look:  
+![intro](https://raw.githubusercontent.com/shootermv/drivers-contact-list/master/screen-moblie.png?raw=true)  
 
 # Tools Used To Build This App:  
 - Create React App
@@ -18,7 +20,7 @@ The motivation behind this repo was - to create React app that displayes a conta
 # Interesting Things About This Project
 * It uses React Hooks
 * Semantic HTML
-* Unit tests for reducer
+* Unit tests for all reducer functions (```npm test```)
 * Usage of css vars
 
 # How To Run
