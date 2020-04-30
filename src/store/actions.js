@@ -9,19 +9,14 @@ export function getContacts() {
         fetch(url)
             .then(data => data.json())
             .then(
-                contacts => { 
-                    dispatch(success(contacts));
-                },
-                error => {
-                    //dispatch(failure(error.toString()));
-                    //dispatch(alertActions.error(error.toString()));
-                }
+                contacts => dispatch(success(contacts)),
+                error => dispatch(failure(error.toString()))
             );
     };
 
     function request() { return { type: contactConstants.REQUEST } }
     function success(contacts) { return { type: contactConstants.SUCCESS, contacts } }
-    // function failure(error) { return { type: contactConstants.FAILURE, error } }
+    function failure(error) { return { type: contactConstants.FAILURE, error } }
 }
 
 export function filterContacts(term) {
