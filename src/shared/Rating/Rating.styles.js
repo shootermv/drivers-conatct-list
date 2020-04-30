@@ -17,19 +17,20 @@ const Wrap = styled.div`
         margin: 2px;
         float: left;
         background-color: grey;
-       -webkit-clip-path: polygon(
-        50% 0%,
-        63% 38%,
-        100% 38%,
-        69% 59%,
-        82% 100%,
-        50% 75%,
-        18% 100%,
-        31% 59%,
-        0% 38%,
-        37% 38%
-        );
+        clip-path: polygon(
+         50% 0%,
+         63% 38%,
+         100% 38%,
+         69% 59%,
+         82% 100%,
+         50% 75%,
+         18% 100%,
+         31% 59%,
+         0% 38%,
+         37% 38%
+        );        
       }
+
       .star.selected {
         background-color: yellow;
       }   
