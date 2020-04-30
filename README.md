@@ -3,7 +3,7 @@
 # Motivation
 The motivation behind this repo was - to create a simple React app that displayes a contacts gallery   
 ![intro](https://raw.githubusercontent.com/shootermv/drivers-contact-list/master/screen.png?raw=true)  
-here is mobule look:  
+mobile support:  
 ![intro-mobile](https://raw.githubusercontent.com/shootermv/drivers-contact-list/master/screen-mobile.png?raw=true)  
 
 # Tools Used To Build This App:  
