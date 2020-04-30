@@ -18,7 +18,7 @@ here is mobule look:
 * Should support missing fields
 
 # Interesting Things About This Project
-* It uses React Hooks
+* It uses [React Hooks](https://reactjs.org/docs/hooks-intro.html)
 * Semantic HTML
 * Unit tests for all reducer functions (```npm test```)
 * Usage of css vars
