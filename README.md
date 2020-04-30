@@ -2,9 +2,9 @@
 
 # Motivation
 The motivation behind this repo was - to create a simple React app that displayes a contacts gallery   
-![intro](https://raw.githubusercontent.com/shootermv/drivers-contact-list/master/screen.png?raw=true) 
+![intro](https://raw.githubusercontent.com/shootermv/drivers-contact-list/master/screen.png?raw=true)  
 here is mobule look:  
-![intro](https://raw.githubusercontent.com/shootermv/drivers-contact-list/master/screen-moblie.png?raw=true)  
+![intro-mobile](https://raw.githubusercontent.com/shootermv/drivers-contact-list/master/screen-mobile.png?raw=true)  
 
 # Tools Used To Build This App:  
 - Create React App
@@ -22,6 +22,7 @@ here is mobule look:
 * Semantic HTML
 * Unit tests for all reducer functions (```npm test```)
 * Usage of css vars
+* Uses [grid-css](https://css-tricks.com/snippets/css/complete-guide-grid/)
 
 # How To Run
  ```bash
