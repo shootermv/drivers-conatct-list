@@ -1,4 +1,4 @@
-[Demo](http://shootermv.github.io/drivers-contact-list/)  
+[☣︎Demo☣︎](http://shootermv.github.io/drivers-contact-list/)  
 
 # Motivation
 The motivation behind this repo was - to create a simple React app that displayes a contacts gallery   
