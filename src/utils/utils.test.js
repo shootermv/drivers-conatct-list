@@ -1,7 +1,29 @@
 
-import {searchByText} from './index';
+import {searchByText, formatPhone} from './index';
 
-describe('utils', () => {
+describe('utils formatPhone', () => {
+
+  it('formatPhone - should add mmissing hyphens', () => {
+    const term = '1234567890';
+    const result = '123-456-7890';
+    expect(formatPhone(term)).toEqual(result);
+  });
+
+  it('formatPhone - should replace dots by hyphens', () => {
+    const term = '123.456.7890';
+    const result = '123-456-7890';
+    expect(formatPhone(term)).toEqual(result);
+  });
+
+  it('formatPhone - should replace spaces by hyphens', () => {
+    const term = '123 456   7890';
+    const result = '123-456-7890';
+    expect(formatPhone(term)).toEqual(result);
+  });
+})
+
+
+describe('utils searchByText', () => {
     it('searchByText - case should be ignored', () => {
       const arr = [{
           name: 'Vasia',
@@ -14,7 +36,7 @@ describe('utils', () => {
       }]);
     });
 
-    it('searchByText - excluded field should be ignored', () => {
+    it('searchByText - "excluded" field should be ignored', () => {
         const arr = [{
             name: 'Vasia',
             ex: ''

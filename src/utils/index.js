@@ -1,5 +1,10 @@
 import _ from 'lodash'
 
+/**
+  * @desc should format phone number string to 111-111-1111 format
+  * @param string $num - the phone string we recieved from API
+  * @return string - formatted phne number
+*/
 export const formatPhone = num => {
     if (!num) return;
     num = num.replace(/\.|\s+/g, '-')
