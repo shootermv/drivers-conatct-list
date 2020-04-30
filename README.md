@@ -7,9 +7,10 @@ here is mobule look:
 ![intro-mobile](https://raw.githubusercontent.com/shootermv/drivers-contact-list/master/screen-mobile.png?raw=true)  
 
 # Tools Used To Build This App:  
-- Create React App
-- Styled Components
-- Redux
+- [Create React App](https://reactjs.org/docs/create-a-new-react-app.html)
+- [Styled Components](https://styled-components.com/)
+- [Redux](https://redux.js.org/)
+- [Lodash](https://lodash.com/)
 
 # Behaviors
 * Should filter contacts when somebody types at the "search" box
