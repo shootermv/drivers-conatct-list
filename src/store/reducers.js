@@ -1,7 +1,6 @@
 import { contactConstants } from './constants';
-const filterContacts = (arr, term) => {
-    return arr.filter(obj => Object.keys(obj).some(key => (key !== 'profile_image') && (new RegExp(term, 'ig')).test(obj[key])));
-}
+import { searchByText } from '../utils';
+
 
 export function contacts(state = {contacts:[], filtered:[], term: null, loading: false}, action) {
    
@@ -22,7 +21,7 @@ export function contacts(state = {contacts:[], filtered:[], term: null, loading:
             
         case contactConstants.FILTERED:  
             let {term} = action;
-            let filtered = filterContacts(state.contacts, term)
+            let filtered = searchByText(state.contacts, term, 'profile_image')
             return {                
                 ...state,
                 term,
