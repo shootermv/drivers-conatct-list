@@ -16,7 +16,7 @@ export default function App() {
   const { filtered: filteredContacts, loading } = useSelector(({ filtered, loading }) => ({ filtered, loading }));
  
 
-  useEffect(() =>dispatch(getContacts()), []);
+  useEffect(() =>dispatch(getContacts()), [dispatch]);
   
 
   return (

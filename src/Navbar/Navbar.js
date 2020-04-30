@@ -19,12 +19,12 @@ const Navbar = () => {
         <Brand>
             <a href="/">
                 <span>Contact List</span>
-                <img src={logo}/>
+                <img src={logo} alt={'company logo'}/>
             </a>
         </Brand>
         <Form>
             <Input placeholder="search" value={term} onInput={e => dispatch(filterContacts(e.target.value))}/>
-            {term ? <img src={cleanBtn} onClick={e => dispatch(filterCleaned())}/>: <img src={searchIcon}/>}
+            {term ? <img alt={'clean'} src={cleanBtn} onClick={e => dispatch(filterCleaned())}/>: <img  alt={'search'} src={searchIcon}/>}
         </Form>
     </Header>
    );
