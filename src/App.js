@@ -16,7 +16,12 @@ export default function App() {
   const { filtered: filteredContacts, loading } = useSelector(({ filtered, loading }) => ({ filtered, loading }));
  
 
-  useEffect(() =>dispatch(getContacts()), [dispatch]);
+  useEffect(() => {
+    async function fetchData() {
+       dispatch(getContacts())
+    }
+    fetchData()
+  }, [dispatch]);
   
 
   return (
