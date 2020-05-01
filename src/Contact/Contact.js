@@ -33,7 +33,7 @@ const Contact = ({contact}) => {
           </Row>
           <Row>
             <label>Email:</label> 
-            <b>{email || 'N/A'}</b>
+            <b title={email}>{email || 'N/A'}</b>
           </Row>
        </DetailsContainer>
     </Article>

@@ -6,7 +6,7 @@ import "./styles.css";
 /* components */
 import Norecords from './App.styles';
 import Navbar from './Navbar';
-import Contact from './Contactt';
+import Contact from './Contact';
 import Loader from './shared/Loader';
 
 import {getContacts} from './store/actions';
