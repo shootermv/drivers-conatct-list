@@ -9,6 +9,7 @@ import Navbar from './Navbar';
 import Contact from './Contact';
 import Loader from './shared/Loader';
 
+/* redux */
 import {getContacts} from './store/actions';
 
 export default function App() {
@@ -20,7 +21,7 @@ export default function App() {
     async function fetchData() {
        dispatch(getContacts())
     }
-    fetchData()
+    fetchData();
   }, [dispatch]);
   
 
