@@ -25,7 +25,6 @@ export default function App() {
     fetchData();
   }, [dispatch]);
   
-console.log(`theme: ${theme}`)
   return (
     <ThemeProvider theme={theme === 'light' ? light : dark}>
       <AppStyles>
