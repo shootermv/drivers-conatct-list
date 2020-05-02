@@ -12,7 +12,7 @@ import {Input, Form, Brand, Header} from  './Navbar.styles.js';
 
 
 const Navbar = () => {
-  const term = useSelector(({term}) => term || '');
+  const term = useSelector(({contact: {term}}) => term || '');
   const chang = e => dispatch(filterContacts(e.target.value));
   const dispatch = useDispatch();
   return (

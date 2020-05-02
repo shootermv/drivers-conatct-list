@@ -1,4 +1,4 @@
-import contactsReducer from './reducers'
+import {contact as contactsReducer} from './reducers'
 
 describe('contacts reducer', () => {
     it('should return the initial state', () => {

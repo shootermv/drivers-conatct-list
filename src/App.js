@@ -16,7 +16,7 @@ import {getContacts} from './store/actions';
 
 export default function App() {
   const dispatch = useDispatch();
-  const { filtered: filteredContacts, loading } = useSelector(({ filtered, loading }) => ({ filtered, loading }));
+  const { filtered: filteredContacts, loading } = useSelector(({contact: { filtered, loading }}) => ({ filtered, loading }));
 
   useEffect(() => {
     async function fetchData() {

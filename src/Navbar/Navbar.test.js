@@ -10,7 +10,7 @@ describe('Navbar spec', () => {
     
 
     it('renders the component', () => {
-      const mockStore = createStore(reducer, {term: null});  
+      const mockStore = createStore(reducer, {contact: {term: null}, theme: ''});  
       const container = render(
         <Provider store={mockStore}>
            <Navbar/>
@@ -20,7 +20,7 @@ describe('Navbar spec', () => {
     })
 
     it('should call "filterContacts" action  when somebody types at the input', () => {
-        const mockStore = createStore(reducer, {term: null});  
+        const mockStore = createStore(reducer, {contact: {term: null}, theme: ''});  
         mockStore.dispatch = jest.fn();
         render(
           <Provider store={mockStore}>

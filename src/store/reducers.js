@@ -1,15 +1,17 @@
 import { contactConstants } from './constants';
 import { searchByText } from '../utils';
+import { combineReducers } from "redux";
 
-
-export function contacts(state = {contacts:[], filtered:[], term: null, loading: false}, action) {
+export function contact(state = {contacts:[], filtered:[], term: null, loading: false}, action) {
    
     switch (action.type) {
+
         case contactConstants.REQUEST:  
             return  {     
                 ...state,           
                 loading: true 
-            };           
+            };
+
         case contactConstants.SUCCESS:       
            const {contacts} =  action;
             return  {     
@@ -28,17 +30,28 @@ export function contacts(state = {contacts:[], filtered:[], term: null, loading:
                 filtered
             };
 
-          
         case contactConstants.FILTER_CLEANED:
             return {    
                 ...state,
                 term: '',
                 filtered: state.contacts
-            }; 
-            
+            };    
     
         default:
             return state
     }
 } 
-export default contacts;
+
+export function theme (state = 'light', action) {
+    switch (action.type) {
+      case 'THEME':
+        return action.theme   
+      default:
+        return state
+    }
+} 
+
+export default combineReducers({
+   contact,
+   theme
+});
