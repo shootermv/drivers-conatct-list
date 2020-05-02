@@ -6,7 +6,7 @@ import {filterContacts, filterCleaned} from '../store/actions';
 import searchIcon from './searchIcon.svg';
 import logo from './logo.svg';
 import cleanBtn from './cleanBtn.svg';
-
+import ThemeToggle from './ThemeToggle'
 
 import {Input, Form, Brand, Header} from  './Navbar.styles.js';
 
@@ -23,6 +23,7 @@ const Navbar = () => {
                 <img src={logo} alt={'company logo'}/>
             </a>
         </Brand>
+        <ThemeToggle/>
         <Form>
             <Input placeholder="search" value={term} onChange={chang}/>
             {term ? <img alt={'clean'} src={cleanBtn} onClick={e => dispatch(filterCleaned())}/>: <img  alt={'search'} src={searchIcon}/>}

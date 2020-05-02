@@ -25,3 +25,7 @@ export function filterContacts(term) {
 export function filterCleaned() {
     return { type: contactConstants.FILTER_CLEANED}
 }
+
+export function changeTheme(theme) {
+    return { type: 'THEME', theme}
+}

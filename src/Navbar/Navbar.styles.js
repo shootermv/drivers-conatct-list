@@ -4,7 +4,6 @@ import styled from 'styled-components';
 const Header = styled.header`
     background: ${props => props.theme.primaryColor}/*var(--main-primary-color)*/;
     display: flex;
-    justify-content: space-between;
     padding: 10px 20px;
     box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
     position: sticky;
@@ -13,7 +12,9 @@ const Header = styled.header`
 `
   
 const Brand = styled.div`
-   a span{display:none;}
+   flex: 1;
+   a { text-align: left;}
+   a span{ display:none; }
    a img {
        height: 30px;
        margin: 5px 10px 0  0; 
@@ -21,7 +22,7 @@ const Brand = styled.div`
    /* mobile styles */
 
    /* small tablet styles */
-   @media screen and (min-width: 620px){
+   @media screen and (min-width: 620px) {
       a img{display:none;} 
       a span{
           display:block;
@@ -33,6 +34,7 @@ const Brand = styled.div`
 
 const Form = styled.form`
     display: flex;
+    margin-left: 5px;
     border-radius: 20px;
     background: var(--main-secondary-color);
     padding: 0 15px;

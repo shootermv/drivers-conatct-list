@@ -16,7 +16,7 @@ import {getContacts} from './store/actions';
 
 export default function App() {
   const dispatch = useDispatch();
-  const { filtered: filteredContacts, loading } = useSelector(({contact: { filtered, loading }}) => ({ filtered, loading }));
+  const { filtered: filteredContacts, loading, theme } = useSelector(({theme, contact: { filtered, loading }}) => ({ filtered, loading, theme }));
 
   useEffect(() => {
     async function fetchData() {
@@ -25,9 +25,9 @@ export default function App() {
     fetchData();
   }, [dispatch]);
   
-
+console.log(`theme: ${theme}`)
   return (
-    <ThemeProvider theme={light}>
+    <ThemeProvider theme={theme === 'light' ? light : dark}>
       <AppStyles>
         <Navbar/>
         <main className="content">

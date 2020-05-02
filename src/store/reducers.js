@@ -42,7 +42,7 @@ export function contact(state = {contacts:[], filtered:[], term: null, loading: 
     }
 } 
 
-export function theme (state = 'light', action) {
+export function theme (state = 'dark', action) {
     switch (action.type) {
       case 'THEME':
         return action.theme   
