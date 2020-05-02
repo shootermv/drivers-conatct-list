@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 
 const Header = styled.header`
-    background: var(--main-primary-color);
+    background: ${props => props.theme.primaryColor}/*var(--main-primary-color)*/;
     display: flex;
     justify-content: space-between;
     padding: 10px 20px;

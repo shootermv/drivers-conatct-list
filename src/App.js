@@ -1,10 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
+import { ThemeProvider } from 'styled-components';
+import { dark, light } from './theme/globalStyle';
 import "./styles.css";
 
 /* components */
-import Norecords from './App.styles';
+import {Norecords, AppStyles} from './App.styles';
 import Navbar from './Navbar';
 import Contact from './Contact';
 import Loader from './shared/Loader';
@@ -15,7 +17,6 @@ import {getContacts} from './store/actions';
 export default function App() {
   const dispatch = useDispatch();
   const { filtered: filteredContacts, loading } = useSelector(({ filtered, loading }) => ({ filtered, loading }));
- 
 
   useEffect(() => {
     async function fetchData() {
@@ -26,15 +27,17 @@ export default function App() {
   
 
   return (
-    <div className="App">
-      <Navbar/>
-      <main className="content">
-          {loading && <Loader/>} 
-          {!loading && filteredContacts.map(contact => (
-            <Contact key={`contact-${contact.name}`} contact={contact} />
-          ))}
-          {!loading && !filteredContacts.length && <Norecords>No Records Found</Norecords>}
-      </main>
-    </div>
+    <ThemeProvider theme={light}>
+      <AppStyles>
+        <Navbar/>
+        <main className="content">
+            {loading && <Loader/>} 
+            {!loading && filteredContacts.map(contact => (
+              <Contact key={`contact-${contact.name}`} contact={contact} />
+            ))}
+            {!loading && !filteredContacts.length && <Norecords>No Records Found</Norecords>}
+        </main>
+      </AppStyles>
+    </ThemeProvider>
   );
 }

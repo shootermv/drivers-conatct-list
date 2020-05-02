@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 const Article = styled.article`
-   background: var(--main-secondary-color); 
+   background: ${props => props.theme.secondaryColor}; 
    padding: 10px;
-   color: var(--main-text-color);
+   color: ${props => props.theme.primaryTxtColor};
    overflow: hidden;
    height: 475px;
    cursor: pointer;
@@ -52,7 +52,7 @@ const DriverType = styled.img`
    }  
 `
 const DetailsContainer = styled.div`
-   background: var(--main-secondary-color);
+   background: ${props => props.theme.secondaryColor};
    transition: 0.1s ease-in-out;
    &:hover {
     transform: translateY(-100px)
@@ -62,15 +62,13 @@ const DetailsContainer = styled.div`
       padding: 5px 25px;
       white-space: nowrap;
       overflow: hidden;
-      text-overflow: ellipsis;
-      
+      text-overflow: ellipsis;   
    }
    /* small tablet styles */
    @media screen and (min-width: 1200px){
       h3{
          font-size:0.9em;
          padding: 10px 15px;
-
       }
    } 
 
