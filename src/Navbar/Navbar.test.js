@@ -27,7 +27,7 @@ describe('Navbar spec', () => {
              <Navbar/>
           </Provider>
         )
-        const inpt = document.querySelector('input');
+        const inpt = document.querySelector('input[placeholder="search"]');
         const target = {target: {value: '1'}};
         fireEvent.change(inpt, target);
         expect(mockStore.dispatch).toHaveBeenCalledTimes(1);
