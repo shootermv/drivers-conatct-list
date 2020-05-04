@@ -17,11 +17,12 @@ mobile support:
 * Should display addintional info when hovering above one of the contacts
 * Should be resposive
 * Should support missing fields
+* should toggle theme
 
 # Interesting Things About This Project
 * It uses [React Hooks](https://reactjs.org/docs/hooks-intro.html)
 * Semantic HTML
-* Unit tests for all reducer, utils & sanpshots  (```npm test```)
+* Unit tests for reducer, utils & components  (```npm test```)
 * Usage of css vars
 * Uses [grid-css](https://css-tricks.com/snippets/css/complete-guide-grid/)
 
