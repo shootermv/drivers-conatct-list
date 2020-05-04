@@ -23,7 +23,7 @@ input {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: #ececec;
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -35,9 +35,11 @@ input {
   width: 18px;
   left: 1px;
   bottom: 25px;
-  background-color: white;
+  background-color: ${props => props.theme.nm === 'light' ? '#ffb200' : 'transparent'};
   -webkit-transition: .4s;
   transition: .4s;
+  box-shadow: ${props => props.theme.nm === 'dark' ? '5px 5px 0 0 #eee' : 'none'};
+  
 }
 
 input:checked + .slider {
@@ -49,9 +51,9 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateY(23px);
-  -ms-transform: translateY(23px);
-  transform: translateY(23px);
+  -webkit-transform: translateY(14px) ${props => props.theme.nm === 'dark' ? ' rotate(-45deg) translateX(-15px)' : ''};
+  -ms-transform: translateY(14px) ${props => props.theme.nm === 'dark' ? ' rotate(-45deg) translateX(-15px)' : ''};
+  transform: translateY(14px) ${props => props.theme.nm === 'dark' ? ' rotate(-45deg) translateX(-15px)' : ''};
 }
 
 /* Rounded sliders */
@@ -80,14 +82,11 @@ input:checked + .slider:before {
       width: 18px;
       left: 4px;
       bottom: 4px;
-      background-color: white;
-      -webkit-transition: .4s;
-      transition: .4s;
     }
     input:checked + .slider:before {
-        -webkit-transform: translateX(20px);
-        -ms-transform: translateX(20px);
-        transform: translateX(20px);
+        -webkit-transform: translateX(13px)  ${props => props.theme.nm === 'dark' ? ' rotate(-45deg)' : ''};
+        -ms-transform: translateX(13px) ${props => props.theme.nm === 'dark' ? ' rotate(-45deg)' : ''};
+        transform: translateX(13px) ${props => props.theme.nm === 'dark' ? ' rotate(-45deg)' : ''};
     }
   }    
      

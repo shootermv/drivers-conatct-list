@@ -1,4 +1,5 @@
 export const light = {
+    nm: 'light',
     primaryColor: '#00dafc',
     secondaryColor: '#fff',
     primaryBgrColor: '#efefef',
@@ -6,6 +7,7 @@ export const light = {
 }
 
 export const dark = {
+    nm: 'dark',
     primaryColor: '#000',
     secondaryColor: '#333',
     primaryBgrColor: 'rgba(0,0,0, 0.7)',
