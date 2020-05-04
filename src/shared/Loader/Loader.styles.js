@@ -26,7 +26,7 @@ const Spinner = styled.div`
     height: 75px;
     margin: 0;
     background: transparent;
-    border-top: 4px solid var(--main-primary-color);
+    border-top: 4px solid ${props => props.theme.primaryColor};
     border-right: 4px solid transparent;
     border-radius: 50%;
     animation: 1s ${spin} linear infinite;
