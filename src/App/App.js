@@ -2,17 +2,17 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 import { ThemeProvider } from 'styled-components';
-import { dark, light } from './theme/globalStyle';
-import "./styles.css";
+import { dark, light } from '../theme/globalStyle';
+import "../styles.css";
 
 /* components */
 import {Norecords, AppStyles} from './App.styles';
-import Navbar from './Navbar';
-import Contact from './Contact';
-import Loader from './shared/Loader';
+import Navbar from '../Navbar';
+import Contact from '../Contact';
+import Loader from '../shared/Loader';
 
 /* redux */
-import {getContacts} from './store/actions';
+import {getContacts} from '../store/actions';
 
 export default function App() {
   const dispatch = useDispatch();
