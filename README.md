@@ -25,6 +25,7 @@ mobile support:
 * Unit tests for reducer, utils & components  (```npm test```)
 * Usage of css vars
 * Uses [grid-css](https://css-tricks.com/snippets/css/complete-guide-grid/)
+* Uses [storybook](https://storybook.js.org/) for visual tests of components
 
 # How To Run
  ```bash
