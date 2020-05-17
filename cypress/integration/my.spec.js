@@ -4,7 +4,7 @@ describe('my first suite', () => {
   });
 
   it('my first test', () => {
-    cy.location('search').should('be.empty');
+    cy.get('[data-testid=brand]').should('exist')
   });
 
 });

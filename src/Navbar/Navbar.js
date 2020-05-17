@@ -18,7 +18,7 @@ const Navbar = () => {
   return (
     <Header>
         <Brand>
-            <a href="/">
+            <a href="/" data-testid="brand">
                 <span>Contact List</span>
                 <img src={logo} alt={'company logo'}/>
             </a>
