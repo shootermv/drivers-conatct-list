@@ -4,7 +4,10 @@ describe('my first suite', () => {
   });
 
   it('my first test', () => {
-    cy.get('[data-testid=brand]').should('exist')
+    cy.get('[data-testid=brand]').should('exist');
   });
 
+  it('should load all', () => {
+    cy.get('article').should('have.length', 27);
+  });
 });
