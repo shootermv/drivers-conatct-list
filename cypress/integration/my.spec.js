@@ -10,4 +10,10 @@ describe('my first suite', () => {
   it('should load all', () => {
     cy.get('article').should('have.length', 27);
   });
+
+  it('should filter not-matching items', () => {
+    cy.get('article').should('have.length', 27);
+    cy.get('[data-testid=search]').type('lo');
+    cy.get('article').should('have.length', 4);
+  });  
 });

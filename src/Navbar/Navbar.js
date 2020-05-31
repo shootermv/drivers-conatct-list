@@ -25,7 +25,7 @@ const Navbar = () => {
         </Brand>
         <ThemeToggle/>
         <Form>
-            <Input placeholder="search" value={term} onChange={chang}/>
+            <Input placeholder="search" value={term} onChange={chang} data-testid="search"/>
             {term ? <img alt={'clean'} src={cleanBtn} onClick={e => dispatch(filterCleaned())}/>: <img  alt={'search'} src={searchIcon}/>}
         </Form>
     </Header>
