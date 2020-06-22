@@ -22,7 +22,7 @@ const Contact = ({contact}) => {
        </Imgwrap>
        
        <DetailsContainer>
-          <DriverType src={driverType === 'Professional' ? professional : citizen} /> 
+          <DriverType alt="driver type" src={driverType === 'Professional' ? professional : citizen} /> 
           <h3>{name}</h3>
           <div>
             <Rating rating={driverRank}/>
