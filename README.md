@@ -1,7 +1,7 @@
 [☣︎Demo☣︎](http://shootermv.github.io/drivers-contact-list/)  
 
 # Motivation
-The motivation behind this repo was - to create a simple React app that displayes a contacts gallery   
+The motivation behind this repo was - to create a simple React app that displays a contacts gallery   
 ![intro](https://raw.githubusercontent.com/shootermv/drivers-contact-list/master/screen.png?raw=true)  
 mobile support:  
 ![intro-mobile](https://raw.githubusercontent.com/shootermv/drivers-contact-list/master/screen-mobile.png?raw=true)  
