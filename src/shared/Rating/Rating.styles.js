@@ -16,7 +16,7 @@ const Wrap = styled.div`
         width: 25px;
         margin: 2px;
         float: left;
-        background-color: grey;
+        background-color: ${props => props.theme.nm === 'dark' ? 'black' : 'grey'};
         clip-path: polygon(
          50% 0%,
          63% 38%,
@@ -32,7 +32,7 @@ const Wrap = styled.div`
       }
 
       .star.selected {
-        background-color: yellow;
+        background-color:  ${props => props.theme.nm === 'dark' ? 'grey' : 'yellow'};
       }   
 `
 
