@@ -5,7 +5,7 @@ The motivation behind this repo was -
 To create a "contacts gallery" App   
 you can view list a of contacts, search and view additional details,  
 App should be responsive  
-App shold support dark & light theming
+App should support dark & light theming  
 ![intro](https://raw.githubusercontent.com/shootermv/drivers-contact-list/master/screen.png?raw=true)  
 mobile support:  
 ![intro-mobile](https://raw.githubusercontent.com/shootermv/drivers-contact-list/master/screen-mobile.png?raw=true)  
