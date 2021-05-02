@@ -8,5 +8,5 @@ export const getTheme = state => state.theme;
 
 export const getVisibleContacts = createSelector(
     [getTerm, getContacts],
-    (searchTerm, contacts) => searchByText(contacts, searchTerm, "profile_image").length
+    (searchTerm, contacts) =>  searchByText(contacts, searchTerm, "profile_image")
 )
