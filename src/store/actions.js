@@ -18,6 +18,16 @@ export function getContacts() {
     function failure(error) { return { type: contactConstants.FAILURE, error } }
 }
 
+
+
+
+export function filterChanged(term) {
+    return { type: contactConstants.FILTER_CHANGED, term }
+}
+
+
+
+
 export function filterContacts(term) {
     return { type: contactConstants.FILTERED, term }
 }
