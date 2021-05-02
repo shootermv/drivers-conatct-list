@@ -3,7 +3,7 @@ describe('my first suite', () => {
     cy.visit('/');
   });
 
-  it('my first test', () => {
+  it('brand section should exist', () => {
     cy.get('[data-testid=brand]').should('exist');
   });
 
