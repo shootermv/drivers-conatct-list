@@ -31,10 +31,16 @@ mobile support:
 * Uses [grid-css](https://css-tricks.com/snippets/css/complete-guide-grid/)
 * Uses [storybook](https://storybook.js.org/) for visual tests of components
 
-# How To Run
+# How To Run Application
  ```bash
 git clone https://github.com/shootermv/drivers-contact-list.git new-project
 cd new-project
 npm install
 npm start
 ```        
+# How To Run Cypress Tests:
+```bash
+npm run test:cy
+```  
+you should see something like this:
+![image](https://user-images.githubusercontent.com/1336862/116804710-a4185900-ab29-11eb-8c4c-0f4b323df070.png)
