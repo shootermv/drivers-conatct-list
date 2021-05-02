@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import {filterContacts, filterCleaned} from '../store/actions';
+import {filterChanged} from '../store/actions';
 
 /* ICONS */
 import searchIcon from './searchIcon.svg';
@@ -13,7 +13,7 @@ import {Input, Form, Brand, Header} from  './Navbar.styles.js';
 
 const Navbar = () => {
   const term = useSelector(({contact: {term}}) => term || '');
-  const chang = e => dispatch(filterContacts(e.target.value));
+  const changeHandler = e => dispatch(filterChanged(e.target.value));
   const dispatch = useDispatch();
   return (
     <Header>
@@ -25,8 +25,8 @@ const Navbar = () => {
         </Brand>
         <ThemeToggle/>
         <Form>
-            <Input placeholder="search" value={term} onChange={chang} data-testid="search"/>
-            {term ? <img alt={'clean'} src={cleanBtn} onClick={e => dispatch(filterCleaned())}/>: <img  alt={'search'} src={searchIcon}/>}
+            <Input placeholder="search" value={term} onChange={changeHandler} data-testid="search"/>
+            {term ? <img alt={'clean'} src={cleanBtn} onClick={e => dispatch(filterChanged(''))}/>: <img  alt={'search'} src={searchIcon}/>}
         </Form>
     </Header>
    );

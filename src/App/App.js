@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-
 import { ThemeProvider } from 'styled-components';
 import { dark, light } from '../theme/globalStyle';
 import "../styles.css";
@@ -13,10 +12,16 @@ import Loader from '../shared/Loader';
 
 /* redux */
 import {getContacts} from '../store/actions';
+import {getTheme, getLoading, getVisibleContacts} from '../store/selectors';
+
+
 
 export default function App() {
   const dispatch = useDispatch();
-  const { filtered: filteredContacts, loading, theme } = useSelector(({theme, contact: { filtered, loading }}) => ({ filtered, loading, theme }));
+  // selectors
+  const theme = useSelector(getTheme);
+  const visibleContacts = useSelector(getVisibleContacts);
+  const loading = useSelector(getLoading);
 
   useEffect(() => {
     async function fetchData() {
@@ -31,10 +36,10 @@ export default function App() {
         <Navbar/>
         <main className="content">
             {loading && <Loader/>} 
-            {!loading && filteredContacts.map(contact => (
+            {!loading && visibleContacts?.map(contact => (
               <Contact key={`contact-${contact.name}`} contact={contact} />
             ))}
-            {!loading && !filteredContacts.length && <Norecords>No Records Found</Norecords>}
+            {!loading && !visibleContacts?.length && <Norecords>No Records Found</Norecords>}
         </main>
       </AppStyles>
     </ThemeProvider>

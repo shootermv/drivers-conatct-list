@@ -1,9 +1,8 @@
 import { contactConstants } from "./constants";
-import { searchByText } from "../utils";
 import { combineReducers } from "redux";
 
 export function contact(
-  state = { contacts: [], filtered: [], term: null, loading: false },
+  state = { contacts: [], term: "", loading: false },
   action
 ) {
   switch (action.type) {
@@ -18,24 +17,14 @@ export function contact(
       return {
         ...state,
         contacts,
-        filtered: contacts,
         loading: false,
       };
 
-    case contactConstants.FILTERED:
-      let { term } = action;
-      let filtered = searchByText(state.contacts, term, "profile_image");
+    case contactConstants.FILTER_CHANGED:
+      let { term: searchTerm } = action;
       return {
         ...state,
-        term,
-        filtered,
-      };
-
-    case contactConstants.FILTER_CLEANED:
-      return {
-        ...state,
-        term: "",
-        filtered: state.contacts,
+        term: searchTerm,
       };
 
     default:
