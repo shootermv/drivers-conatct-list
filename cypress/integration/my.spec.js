@@ -16,4 +16,11 @@ describe('my first suite', () => {
     cy.get('[data-testid=search]').type('lo');
     cy.get('article').should('have.length', 4);
   });  
+
+  it('should clean filter when pressing "x"', () => {
+    cy.get('[data-testid=search]').type('lo');
+    cy.get('[data-testid=clean-filter]').click();
+    cy.get('article').should('have.length', 27);
+  });
+
 });
