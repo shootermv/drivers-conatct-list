@@ -7,6 +7,8 @@ export function getContacts() {
         dispatch(request());
         try {   
            let contacts = await fetch(url).then(data => data.json())
+           // adding "id" field to all recodrs, because no ids comes from server
+           contacts = contacts.map((itm, idx) => ({id: idx + 1, ...itm}))
            dispatch(success(contacts))
         } catch(error) {
            dispatch(failure(error.toString()))
@@ -19,13 +21,9 @@ export function getContacts() {
 }
 
 
-
-
 export function filterChanged(term) {
     return { type: contactConstants.FILTER_CHANGED, term }
 }
-
-
 
 
 export function filterContacts(term) {

@@ -37,7 +37,7 @@ export default function App() {
         <main className="content">
             {loading && <Loader/>} 
             {!loading && visibleContacts?.map(contact => (
-              <Contact key={`contact-${contact.name}`} contact={contact} />
+              <Contact key={`contact-${contact.id}`} contact={contact} />
             ))}
             {!loading && !visibleContacts?.length && <Norecords>No Records Found</Norecords>}
         </main>
