@@ -40,7 +40,11 @@ npm start
 ```        
 # How To Run Cypress Tests:
 ```bash
-npm run test:cy
+npm start # to start dev server
+``` 
+in another terminal:   
+```bash
+npm run test:cy # to start cypress in dev mode
 ```  
 you should see something like this:
 ![image](https://user-images.githubusercontent.com/1336862/116804710-a4185900-ab29-11eb-8c4c-0f4b323df070.png)
