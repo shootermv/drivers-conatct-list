@@ -7,7 +7,7 @@ describe('my first suite', () => {
     cy.get('[data-testid=brand]').should('exist');
   });
 
-  it('should load all', () => {
+  it('should load all 27 contacts', () => {
     cy.get('article').should('have.length', 27);
   });
 
