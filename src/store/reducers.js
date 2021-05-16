@@ -1,4 +1,4 @@
-import { contactConstants } from "./constants";
+import { contactConstants, themeConstants } from "./constants";
 import { combineReducers } from "redux";
 
 export function contact(
@@ -34,8 +34,8 @@ export function contact(
 
 export function theme(state = "light", action) {
   switch (action.type) {
-    case "THEME":
-      return action.theme;
+    case themeConstants.CHANGE_THEME:
+      return  state === "light" ? "dark" : "light";
     default:
       return state;
   }

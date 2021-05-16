@@ -1,4 +1,4 @@
-import { contactConstants } from './constants';
+import { contactConstants, themeConstants } from './constants';
 
 const url = `${process.env.REACT_APP_URL ? 'https' : 'http'}://private-05627-frontendnewhire.apiary-mock.com/contact_list`;
 
@@ -34,6 +34,6 @@ export function filterCleaned() {
     return { type: contactConstants.FILTER_CLEANED}
 }
 
-export function changeTheme(theme) {
-    return { type: 'THEME', theme}
+export function changeTheme() {
+    return { type: themeConstants.CHANGE_THEME}
 }

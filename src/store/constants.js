@@ -6,3 +6,5 @@ export const contactConstants = {
     FILTER_CLEANED: 'CONTACTS_FILTER_CLEANED',
     FILTER_CHANGED: 'CONTACTS_FILTER_CHANGED',
 }
+
+export const themeConstants = {CHANGE_THEME: "CHANGE_THEME"}
